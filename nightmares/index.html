@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Nightmare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://www.psychologicalscience.org/redesign/wp-content/uploads/2022/01/How-Haunted-Houses-Measure-Fear-Web.jpg'); /* Replace with your own spooky background image URL */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .nightmare-option {
+      font-size: 24px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transform-origin: center;
+      transition: transform 0.2s ease;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .nightmare-option:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+    .countdown {
+      font-size: 24px;
+      margin-top: 40px;
+      color: #f00;
+      text-shadow: 2px 2px 4px #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nightmare-option" onclick="goToPage('/nightmares/chase.html')">Chasing Nightmare</div>
+    <div class="nightmare-option" onclick="goToPage('/nightmares/fall.html')">Falling Nightmare</div>
+    <div class="nightmare-option" onclick="goToPage('/nightmares/monster.html')">Monster Attack Nightmare</div>
+    <div class="nightmare-option" onclick="goToPage('/nightmares/blackhole.html')">Blackhole Nightmare</div>
+    <div class="countdown" id="countdown"></div>
+
+    <script>
+      // Function to redirect to the selected nightmare page
+      function goToPage(page) {
+        window.location.href = page;
+      }
+
+      // Countdown timer
+      function startCountdown(duration, display) {
+        let timer = duration;
+        const countdownInterval = setInterval(function () {
+          display.textContent = timer;
+          if (--timer < 0) {
+            clearInterval(countdownInterval);
+            display.textContent = 'Time\'s up!';
+          }
+        }, 1000);
+      }
+
+      // Set the countdown duration (in seconds) for each nightmare scenario
+      document.querySelector('.nightmare-option:nth-child(1)').addEventListener('click', function () {
+        startCountdown(60, document.getElementById('countdown'));
+      });
+      document.querySelector('.nightmare-option:nth-child(2)').addEventListener('click', function () {
+        startCountdown(45, document.getElementById('countdown'));
+      });
+      document.querySelector('.nightmare-option:nth-child(3)').addEventListener('click', function () {
+        startCountdown(90, document.getElementById('countdown'));
+      });
+      document.querySelector('.nightmare-option:nth-child(4)').addEventListener('click', function () {
+        startCountdown(30, document.getElementById('countdown'));
+      });
+    </script>
+  </div>
+</body>
+</html>

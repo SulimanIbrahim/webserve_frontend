@@ -1,0 +1,154 @@
+body {
+    background-image: url(b50552acee4bf0b53193a58462f932f9.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    color: #c4b48a;
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+  /*  background-image: url("https://cdn.pixabay.com/photo/2017/10/27/23/25/spider-web-2891637_960_720.png"); */
+    background-repeat: repeat;
+}
+@font-face {
+    font-family: GraublauWeb;
+    src: url("path/GraublauWeb.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GraublauWeb;
+    font-weight: bold;
+    src: url("") format("opentype");
+}
+.nav-item{
+    color: #bd2828;
+
+}
+.navbar1
+{
+    justify-content: center;
+    background-color: rgba(119, 85, 51, 0.229);
+    
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+.linky {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    text-size-adjust: 4rem;
+    display: block;
+    border-bottom: #cbb700, solid , 1px;
+    margin-top:10px ;
+    margin-right: 3rem;
+    margin-left :1 rem;
+    padding-left: 1rem;
+    color: #c4b48a;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.linky:hover{
+    color: #d09408;
+}
+.logo1
+{
+    margin-top: -14px;
+    margin-right: 3rem;
+    position: relative;
+    float: left;
+    width: 80px;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.text1
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: -7rem;
+    margin-bottom: 7rem;
+}
+h1 
+{
+    color: #c4b48a;
+    font-size: 100px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.warning-h
+{
+    color: #fbe28ed9;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style:oblique;
+}
+p.warning {
+    color: #d09408;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style:oblique;
+}
+
+p.message {
+    color: #d09408;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style:oblique;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.dangerous-btn {
+    background-color: #d09408;
+    color: #ff8000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.dangerous-btn:hover {
+    background-color: #ff0000;
+}
+
+.spider {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("https://i.ytimg.com/vi/dptiQtkCbyQ/hqdefault.jpg");
+    background-size: contain;
+    animation: spiderWalk 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes spiderWalk {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

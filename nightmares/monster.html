@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monster Attack Nightmare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Hide horizontal scrollbar */
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .monster-nightmare {
+      font-size: 36px;
+      text-shadow: 2px 2px 4px #000;
+      position: relative;
+      animation: shake 1s infinite;
+    }
+    /* Add styles for the background image */
+    .monster-attack {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    /* Keyframes for the shaking effect */
+    @keyframes shake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Add the background image via URL -->
+  <img class="monster-attack" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bcb37a39-0266-4bdb-86ec-a9e93660220f/df0wbyp-f46f795b-b3df-4041-8ccd-4c89ba651c5e.jpg/v1/fill/w_1050,h_761,q_70,strp/monster_chase_by_artdexo2000_df0wbyp-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTI4IiwicGF0aCI6IlwvZlwvYmNiMzdhMzktMDI2Ni00YmRiLTg2ZWMtYTllOTM2NjAyMjBmXC9kZjB3YnlwLWY0NmY3OTViLWIzZGYtNDA0MS04Y2NkLTRjODliYTY1MWM1ZS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dFGsu9U8dEcj8uigcUUOO-KXxLGBlz-GH8r_ETDOGds" alt="Monster Attack">
+
+  <div class="container">
+    <div class="monster-nightmare">Monster Attack Nightmare</div>
+  </div>
+  <script>
+    // Function to stop the shaking animation on click
+    function stopShaking() {
+      const monsterText = document.querySelector('.monster-nightmare');
+      monsterText.style.animation = 'none';
+    }
+
+    // Event listener to stop the shaking animation on click
+    document.addEventListener('click', stopShaking);
+  </script>
+</body>
+</html>

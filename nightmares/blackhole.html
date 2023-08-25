@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Blackholed Nightmare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .nightmare-text {
+      font-size: 36px;
+      text-shadow: 2px 2px 4px #000;
+      margin-bottom: 20px;
+    }
+    .student-name {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .deadline-text {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    .student-image {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    /* Keyframes for the blinking effect */
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nightmare-text">Student Blackholed Nightmare</div>
+    <div class="student-name"></div>
+    <div class="deadline-text">Your Blackhole: 3 Hours</div>
+    <img class="student-image" src="https://as1.ftcdn.net/v2/jpg/02/36/66/22/1000_F_236662274_RQ1GcyXr8Y1B4ck9agZGYjErk2Lo19pJ.jpg" alt="John Doe Image">
+
+    <script>
+      // Function to simulate blinking effect
+      function blinkText() {
+        const nightmareText = document.querySelector('.nightmare-text');
+        nightmareText.style.animation = 'blink 1s infinite';
+      }
+
+      // Simulate the blinking effect on page load
+      blinkText();
+    </script>
+  </div>
+</body>
+</html>

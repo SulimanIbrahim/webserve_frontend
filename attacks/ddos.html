@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Address Lookup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://info.varonis.com/hubfs/Imported_Blog_Media/ddos-attack-hero.png'); /* Replace with your own nice background image URL */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+    .form-label {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .form-input {
+      width: 250px;
+      padding: 8px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .submit-button {
+      background-color: #ff5722;
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-button:hover {
+      background-color: #ff7043;
+    }
+    .welcome-message {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="form-container">
+          <h2>Launch DDOS attack:</h2>
+          <form method=>
+            <label class="form-label" for="ipAddress">Enter IP or Domain (Max 20 characters):</label>
+            <input class="form-input" type="text" id="ipAddress" name="ipAddress" maxlength="20" required>
+            <button class="submit-button" type="submit">Launch</button>
+              <div class="welcome-message">Launching DDOS attacks without permission is illegal act, and you hold sole responsbility</div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

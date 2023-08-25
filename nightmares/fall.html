@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falling Nightmare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .falling-nightmare {
+      font-size: 36px;
+      text-shadow: 2px 2px 4px #000;
+    }
+    /* Add styles for the background image */
+    .night-sky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add the background image via URL -->
+  <img class="night-sky" src="https://static.toiimg.com/thumb/65473092.cms?width=400&height=300&resizemode=4" alt="Night Sky">
+
+  <div class="container">
+    <div class="falling-nightmare">Falling Nightmare</div>
+  </div>
+  <script>
+    // Function to simulate falling nightmare effect
+    function fallingNightmare() {
+      const nightmareText = document.querySelector('.falling-nightmare');
+      const screenHeight = window.innerHeight;
+      let positionY = 0;
+      let animationFrame;
+      
+      function animate() {
+        positionY += 2; // Adjust this value to control the falling speed
+        nightmareText.style.transform = `translateY(${positionY}px)`;
+        if (positionY < screenHeight) {
+          animationFrame = requestAnimationFrame(animate);
+        } else {
+          positionY = 0;
+          nightmareText.style.transform = 'translateY(0)';
+          animate();
+        }
+      }
+
+      animate();
+
+      // Stop the falling animation on click
+      nightmareText.addEventListener('click', () => {
+        cancelAnimationFrame(animationFrame);
+      });
+    }
+
+    fallingNightmare();
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height: 100vh;
+    overflow: hidden;
+	overflow-y: auto; 
+}
+
+.title {
+    text-align: center;
+    padding: 0 0 5px;
+    border-bottom: 1px solid silver;
+}
+
+.article {
+	font-size: 30px;
+    max-width: auto;
+    margin: 0 auto;
+    background: #91cfc9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comments {
+	border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #e8eada;
+}
+
+.comments p {
+	font-size: 20px;
+	border: 5px solid #400707;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 5px;
+	background-color: #e8eada;
+}
+
+.comment-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.comment-form textarea {
+    width: 96%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.comment-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.comment-form button:hover {
+    background-color: #1b4f72;
+}

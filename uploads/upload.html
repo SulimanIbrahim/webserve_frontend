@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #2980b9, #8e44ad);
+	  overflow: hidden;
+    }
+
+    .upload-form {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .form-field {
+      margin-bottom: 10px;
+    }
+
+    .form-field label {
+      display: block;
+      font-weight: bold;
+    }
+
+    .form-field input[type="file"] {
+      width: 100%;
+    }
+
+    .form-field input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-field input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-form">
+    <form action="/uploads" method="post" enctype="multipart/form-data">
+      <div class="form-field">
+        <label for="fileToUpload">Select a file to upload:</label>
+        <input type="file" name="fileToUpload" id="fileToUpload">
+      </div>
+      <div class="form-field">
+        <input type="submit" value="Upload">
+      </div>
+    </form>
+  </div>
+  <script>
+    function validateForm() {
+      var fileInput = document.getElementById('fileToUpload');
+      if (fileInput.files.length === 0) {
+        alert('Please select a file before submitting.');
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
